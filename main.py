@@ -3,10 +3,14 @@ import random
 
 # ================= CẤU HÌNH CHÍNH =================
 TOKEN = os.getenv("TOKEN")
+
 print("DEBUG TOKEN:", TOKEN)
 
-if not TOKEN:
-    raise ValueError("TOKEN chưa được set!")
+if TOKEN is None:
+    raise ValueError("❌ TOKEN đang = None → Render chưa đọc được ENV")
+
+# phần dưới giữ nguyên
+bot.run(TOKEN)
     
 STATUS_TEXT = "💚 Chỉ yêu mình Hyyy"
 
