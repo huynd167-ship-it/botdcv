@@ -5,6 +5,10 @@ import random
 
 # ================= CẤU HÌNH CHÍNH =================
 TOKEN = os.getenv("TOKEN")
+
+if not TOKEN:
+    raise ValueError("TOKEN chưa được set!")
+    
 STATUS_TEXT = "💚 Chỉ yêu mình Hyyy"
 
 class MyBot(commands.Bot):
