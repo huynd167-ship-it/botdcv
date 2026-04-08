@@ -5,6 +5,7 @@ import random
 
 # ================= CẤU HÌNH CHÍNH =================
 TOKEN = os.getenv("TOKEN")
+print("DEBUG TOKEN:", TOKEN)
 
 if not TOKEN:
     raise ValueError("TOKEN chưa được set!")
